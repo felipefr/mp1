@@ -5,3 +5,7 @@ Fichiers enseignement mécanique du point 1 - UPEC
 - Corrigé CC2 - maths GP2 [lien](https://github.com/felipefr/mp1/blob/main/CC2_GP2_maths_corrige.pdf).
 - Merci de me signaler n'importe qu'elle imprécision dans le corrigé (par l'adresse email des pdfs).
 - Notes suivront la semaine prochaine.
+
+# Entraînement pour l'examen:
+- "Cours de Physique Mécanique du Point", Alain Gibaud, Michel Henry . Nous avons étudié Chap 1 - Chap 5, plus annexe 1
+- Plus de conseils suivront les prochains jours, n'oubliez pas de regarder de temps en temps ce page.
