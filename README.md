@@ -8,4 +8,6 @@ Fichiers enseignement mécanique du point 1 - UPEC
 
 # Entraînement pour l'examen:
 - "Cours de Physique Mécanique du Point", Alain Gibaud, Michel Henry . Nous avons étudié Chap 1 - Chap 5, plus annexe 1
+- Exercices supplementaires corrigés du cours
+- et surtout réviser les TDs. Soyez honnête avec vous-même! Quelques concepts doivent être bien claire avant de regarder énormement d'exercises corrigés ou d'apprendre par coeur quelques équations et exercices. 
 - Plus de conseils suivront les prochains jours, n'oubliez pas de regarder de temps en temps ce page.
