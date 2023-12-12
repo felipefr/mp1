@@ -140,8 +140,7 @@ Obs3: Des question extrêmement importants pour CC2 sont marqués avec {(\bf CC2
 	
 	% POSITION VECTOR
 	\draw[vvec,line cap=round] (O) -- (R'); %node[midway,left=2,above=1] {$\vb{r}$};
-	\draw pic["$\theta$"{scale=0.9},
-	draw,angle radius=20,angle eccentricity=1.22] {angle=X--O--X'};
+	\draw pic["$\theta$"{scale=0.9}, draw,angle radius=20,angle eccentricity=1.22] {angle=X--O--X'};
 	\draw pic["$\theta$"{scale=0.9},
 	draw,angle radius=20,angle eccentricity=1.22] {angle=Y--O--Y'};
 	\draw pic["$\theta$"{scale=0.9},
@@ -227,7 +226,7 @@ En compression ($x_A<0$ et $x_B<0$), quel est la condition pour le travail soit 
 \item {(\bf G)} Pourquoi dans les exercices du pendule, on a pu utilisé le PFD et le Théorème d'énergie cinétique dans sa forme classique (en référentiel galiléan ou inertiel), même en utilisant un repère polaire (qui est mobile)?  
 \item {(\bf CC2, E)} Un mouvement circulaire avec $\ddot{\theta}(t) = 0$ est-il dit uniforme? qu'est-ce que si passe avec $\Vec{a}(t)$, est-il nulle?
 \item {(\bf CC2, E)} Sachant que $\Vec{v}(t) = R\dot{\theta} \Vec{u}_{\theta}$, $\Vec{a}(t) = - \dot{\theta} R \Vec{u}_r$ (démontrez-les si vous voulez) pour le mouvement circulaire uniforme, dessinez ces vecteurs pour une position de la particule librement choisi.
-\item {(\bf CC2, E)} Sachant que $\Vec{v}(t) = R\dot{\theta} \Vec{u}_{\theta}$, $\Vec{a}(t) = - \dot{\theta} R \Vec{u}_r + \ddot{\theta} R \Vec{u}_{\theta}$ (démontrez-les si vous voulez) pour le mouvement circulaire non uniforme, dessinez ces vecteurs pour une position de la particule librement choisi. Seriez-vous capable de savoir si le mouvement est circulaire uniforme ou non uniforme juste avec le dessin de vecteur acceleration. 
+\item {(\bf CC2, E)} Sachant que $\Vec{v}(t) = R\dot{\theta} \Vec{u}_{\theta}$, $\Vec{a}(t) = - \dot{\theta}^2 R \Vec{u}_r + \ddot{\theta} R \Vec{u}_{\theta}$ (démontrez-les si vous voulez) pour le mouvement circulaire non uniforme, dessinez ces vecteurs pour une position de la particule librement choisi. Seriez-vous capable de savoir si le mouvement est circulaire uniforme ou non uniforme juste avec le dessin de vecteur acceleration?
 \item {(\bf E)} Quel-est la condition (cinématique) nécessaire pour que un mouvement soit du type rectiligne uniforme (notez que le mot uniforme est employé dans sens différent dans l'exercise 12))? 
  
 \item {(\bf G)} Etant donné $\theta(t) = \omega t$ ($\omega >0$) et $r(\theta(t)) = A + B \theta(t)$ ($A>0, B>0$), décrivant le mouvement d'une particule, calculez le vecteur vitesse et acceleration en repère polaire (utilisez les formules générales écrits dans le rappel du TD). Peut-on dire que cette la trajectoire dessine une spirale dans le plan $x \times y$ (utilisez $x(t) = r(\theta(t)) \cos \theta(t), y(t) =  r(\theta(t)) \sin \theta(t)$ pour aider dans votre raisonement)? 
