@@ -21,7 +21,7 @@ Ci-dessous des compétences de calcul que je conseil réviser:
 - 13h-18h: Dans mon bureau (j'ai une salle de réunion toute a côté). Il faut par contre me prévenir par email (le bureau suivra dans cette email) avec une idée de créneau souhaité pour ne pas avoir trop de monde. Prévenir 15min par personne ou petite groupe de max 3 personnes.
 - S'il y a beaucoup de personnes intéressés, je demandrai une salle à la scolarité entre 15h-16h. J'ajoutera le numéro de la salle ici. 
 
-# mp1
+# C
 Fichiers enseignement mécanique du point 1 - UPEC
 - Les excercises en ce [lien](https://github.com/felipefr/mp1/blob/main/main.pdf)  sont plutôt d'idées que vous pouvez suivre afin de modifier les examples qu'on a travaillé en cours, en allant un peu plus loin.
 - Corrigé CC2 - Chimie-LAS GP1 [lien](https://github.com/felipefr/mp1/blob/main/CC2_GP1_Chim_corrige.pdf).
