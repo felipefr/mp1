@@ -1,3 +1,21 @@
+# Révision Examen (checklist)
+Ci-dessous les concepts théoriques que je conseil réviser:
+- Principe d'inertie
+- Principe Fondamentale de la Dynamique
+- Principe d'action et réaction
+- Mouvement Rectiligne Unifome (et non-uniforme par consequénce)
+- Mouvement Circulaire Unifome (et non-uniforme par consequénce)
+- Theorème de l'énergie cinétique (y inclus la définition du travail)
+
+Ci-dessous des compétences de calcul que je conseil réviser:
+- Analyse dimensionnelle: trouver les dimensions des variables, vérifier s'une équation est consistante, etc
+- Faire un calcul d'ordre de grandeur: approcher les valeurs des variables à un dizaine près et éffectuer des calculs en base 10 (ex: $1\times 10^3$, $1\times 10^5$, $1\times 10^{-2}$
+- Problèmes type 1D: balle de tenis, voiture en ligne droite, etc. Savoir obtenir la vitesse (ou position) apartir d'un tracé de la courbe d'accelération (ou vitesse) simple (constant, linéaire, etc). Les concepts d'integrale (ou primitive) et dérivées doivent être claires: aire sur la courbe et pente d'une courbe respectivement.
+- Problèmes type 2D cartésien: plan incliné, tir d'une balle (tractoire parabolique), etc. Savoir éffectuer la projection des vecteurs (vitesse, acceleration, force, etc) dans repère rotationné mais immobile. Savoir appliquer le PFD dans ces systèmes.
+- Problèmes type 2D polaire: toboogan, pendule, etc. Savoir placer le vecteur position et utiliser les formules de vitesse et acceleration dans ce repère. Savoir dériver par rapport au temps un vecteur décrit dans une base mobile (il faut savoir utiliser la règle du produit, règle de chaîne et se rappeller des dérivées des vecteurs unitaire radiale et circonferentielle)
+- Calculer le travail d'une force étant donné sa expression et sa tractoire: identifier le déplacement elementaire, éffectuer les intégrales en utilisant les bons limites d'intégration.
+- Savoir appliquer le theorème d'énergie cinétique: savoir calculer l'enérgie cinétique d'une particule (possiblement en repère polaire aussi), identifier quand l'énergie est nulle, calculer le travails de toutes les forces, savoir identifier quand ce travail est nulle (pour gagner du temps: quand la force est orthogonale à son déplacement élémentaire.).  
+
 # mp1
 Fichiers enseignement mécanique du point 1 - UPEC
 - Les excercises en ce [lien](https://github.com/felipefr/mp1/blob/main/main.pdf)  sont plutôt d'idées que vous pouvez suivre afin de modifier les examples qu'on a travaillé en cours, en allant un peu plus loin.
