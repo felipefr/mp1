@@ -14,7 +14,12 @@ Ci-dessous des compétences de calcul que je conseil réviser:
 - Problèmes type 2D cartésien: plan incliné, tir d'une balle (tractoire parabolique), etc. Savoir éffectuer la projection des vecteurs (vitesse, acceleration, force, etc) dans repère rotationné mais immobile. Savoir appliquer le PFD dans ces systèmes.
 - Problèmes type 2D polaire: toboogan, pendule, etc. Savoir placer le vecteur position et utiliser les formules de vitesse et acceleration dans ce repère. Savoir dériver par rapport au temps un vecteur décrit dans une base mobile (il faut savoir utiliser la règle du produit, règle de chaîne et se rappeller des dérivées des vecteurs unitaire radiale et circonferentielle)
 - Calculer le travail d'une force étant donné sa expression et sa tractoire: identifier le déplacement elementaire, éffectuer les intégrales en utilisant les bons limites d'intégration.
-- Savoir appliquer le theorème d'énergie cinétique: savoir calculer l'enérgie cinétique d'une particule (possiblement en repère polaire aussi), identifier quand l'énergie est nulle, calculer le travails de toutes les forces, savoir identifier quand ce travail est nulle (pour gagner du temps: quand la force est orthogonale à son déplacement élémentaire.).  
+- Savoir appliquer le theorème d'énergie cinétique: savoir calculer l'enérgie cinétique d'une particule (possiblement en repère polaire aussi), identifier quand l'énergie est nulle, calculer le travails de toutes les forces, savoir identifier quand ce travail est nulle (pour gagner du temps: quand la force est orthogonale à son déplacement élémentaire.).
+
+# Comment me trouver (ce mercredi 20/12)
+- 9h-12h15: P4-018 (je serai dans le milieu dans une TP, mais comme les étudiants de master sont plutôt automnomes, j'estime avoir pas mal de temps pour en discuter. Il faut par contre attendre quelque peu de temps en temps).
+- 13h-18h: Dans mon bureau (j'ai une salle de réunion toute a côté). Il faut par contre me prévenir par email (le bureau suivra dans cette email) avec une idée de créneau souhaité pour ne pas avoir trop de monde. Prévenir 15min par personne ou petite groupe de max 3 personnes.
+- S'il y a beaucoup de personnes intéressés, je demandrai une salle à la scolarité entre 15h-16h. J'ajoutera le numéro de la salle ici. 
 
 # mp1
 Fichiers enseignement mécanique du point 1 - UPEC
