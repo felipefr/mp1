@@ -1,0 +1,104 @@
+%\usepackage[usenames, dvipsnames]{xcolor}
+%\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usetikzlibrary{calc,arrows,fadings,decorations.pathreplacing,decorations.markings,patterns,shapes.geometric}
+\usepackage{calc}	    	% Faire des calculs sur les longueurs.
+\usepackage{ifthen}		
+\usepackage{fp}
+\usepackage{verbatim}
+\usepackage[active,tightpage]{preview}
+%\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{5pt}
+
+%------ mes couleurs -------
+\definecolor{fond}{rgb}{1,0.9,0.75}
+\definecolor{filet}{rgb}{1,0.6,0}
+\definecolor{monOrange}{RGB}{255,157,0}
+\definecolor{monBleu}{rgb}{0.2,0.4,0.6}
+% \definecolor{monBleu}{RGB}{54,134,193}
+\definecolor{monCyan}{RGB}{74,181,247}
+\definecolor{monGris}{RGB}{100,100,100}
+
+%------ styles tikz ---------------
+\colorlet{darkblue}{blue!50!black} 
+\tikzset{>=stealth,inner sep=0pt, outer sep=2pt,}
+\tikzset{tiret/.style={gray,dashed}}
+\tikzset{doublefleche/.style={|<->|,>=stealth,thin}}
+\tikzset{titre/.style={inner sep=0pt, outer sep=0pt,above right,text justified,fill=orange!50}}
+\tikzset{bloc/.style={rounded corners=4pt,color=white,ball color=lightgray,smooth}}
+\tikzset{force/.style={->,ultra thick,rounded corners=4pt,color=monBleu,smooth,line cap=round}}
+\tikzset{vecteur/.style={->,thick,color=black,smooth}}
+\tikzset{verre/.style={draw=SkyBlue,fill=SkyBlue!30}}
+\tikzset{axis/.style={thin,gray}}
+\tikzset{figure/.style={thick,color=#1,fill=purple, opacity=0.5}}
+\tikzset{ressort/.style={very thick,black,smooth}}
+\tikzset{eau/.style={draw=black,fill=blue,opacity=0.5}}
+\tikzset{rayon/.style={draw=red!66,thick,line join=round}}
+%-----------------------------------
+
+%-------- patatoide ----------
+\newcommand{\patate}[1][fill=white] 
+{\draw [#1][preaction={fill=white}] (0,0) .. controls +(0.1,0.2) and +(0.3,0.3) .. (1,0) .. controls +(-0.3,-0.3) and +(-0.05,0.15) .. (1,-1) .. controls +(0.2,-0.6) and +(0.1,-0.2) .. (0,-1) .. controls +(-0.1,0.15) and +(-0.2,-0.4) .. (0,0);}
+%------ aimant -------
+\newcommand{\aimant}[1][ultra thick]{
+\draw[fill, color=red,#1] (0,0.2) rectangle(1,-0.2) node[color=white,midway]{\tiny S};
+\draw[fill, color=black,#1] (1,0.2) rectangle(2,-0.2) node[color=white,midway]{\tiny N};}
+
+% ------ \arcdecercle{}--- longueur d'arc
+\newlength{\longueurarcdecercle}
+\newcommand{\arcdecercle}[1]{\ensuremath{%
+    \settowidth{\longueurarcdecercle}{\ensuremath{#1}}%
+    \overset{%
+        \mbox{%
+                \resizebox{\longueurarcdecercle-2pt}{3pt}{%
+                        \rotatebox{90}{\ensuremath{\hskip-1pt)}}%
+                }%
+        }%
+    }{\text{#1}}%
+}}
+
+% commande \resistanceH{option}{nom}  : résistance de longueur unité, centrée en (0,0).
+\newcommand{\resistanceH}[2]
+{
+\draw[#1,fill=white] (-0.5,3pt)--++(1,0)--++(0,-6pt)--++(-1,0)--cycle;
+\draw[#1] (0,0) node[above=3pt]{\footnotesize #2};
+}
+% commande \resistanceV{option}{nom}  : résistance de longueur unité, centrée en (0,0).
+\newcommand{\resistanceV}[2]
+{
+\draw[#1,fill=white] (-3pt,0.5)--++(0,-1)--++(6pt,0)--++(0,1)--cycle;
+\draw[#1] (0,0) node[left=3pt]{\footnotesize #2};
+}
+% \condoH{options}{nom}{valeur} : condensateur horizontal de longueur unité, centrée en (0,0)
+\newcommand{\condoH}[3]%
+{
+\fill[#1,white] (-3pt,-0.5)rectangle(3pt,0.5);
+\draw[#1,ultra thick] (-3pt,-0.3)--++(0,.6);
+\draw[#1,ultra thick] (3pt,-0.3)--++(0,.6);
+\draw[#1] (0,-0.3) node[below]{\footnotesize #3};
+\draw[#1] (0,0.3) node[above]{\footnotesize#2};
+}
+
+% \condoV{options}{nom}{valeur} : condensateur vertical de longueur unité, centrée en (0,0)
+\newcommand{\condoV}[3]%
+{ 
+\fill[#1,white] (-0.5,-3pt)rectangle(0.5,3pt);
+\draw[#1,ultra thick] (-0.3,-3pt)--++(.6,0);
+\draw[#1,ultra thick] (-0.3,3pt)--++(.6,0);
+\draw[#1] (0.3,0) node[right]{\footnotesize #3};
+\draw[#1] (-0.3,0) node[left]{\footnotesize #2};
+}
+
+% \bobineH{options}{nom}{valeur} : bobine horizontal de longueur unité, centrée en (0,0)
+\newcommand{\bobineH}[3]%
+{
+\fill[#1,white] (-5mm,-3pt) rectangle (5mm,3pt);
+\draw[#1,fill=white,decoration={coil,aspect=0.5,segment length=2mm,amplitude=2mm},decorate] (-0.5,0)--++(1,0)node[midway,above=6pt]{\footnotesize #2} node[midway,below=5pt]{\footnotesize #3};
+}
+
+
+
+     
+
