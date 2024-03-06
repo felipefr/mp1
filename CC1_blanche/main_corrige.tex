@@ -37,8 +37,6 @@ Préparation $1^{er}$ Contrôle Continu de Mécanique du Point 2 (07/03/2024)\\ 
 \begin{document}
 	
 	\maketitle
-
-	\subsection*{Diagnostique}
 	\subsection*{Rappels}
 	\begin{itemize}
 		\item Dérivé d'un fonction composé: $(f \circ g)'(x) = (f' \circ g)(x) g'(x)$.
@@ -50,10 +48,11 @@ Préparation $1^{er}$ Contrôle Continu de Mécanique du Point 2 (07/03/2024)\\ 
 			\Vec{v}(t) &= \dot{r} \Vec{u}_r + r \dot{\theta} \Vec{u}_{\theta}, \quad
 			\Vec{a}(t) = (\ddot{r} - r\dot{\theta}^2) \Vec{u}_r + (2 \dot{r} \dot{\theta} + r \ddot{\theta}) \Vec{u}_{\theta}
 		\end{align*}
+	
 	\item Règle de la main droite (Figure \ref{fig:regledelamaindroite}).
 	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.35\linewidth]{regle_de_la_main_droite}
+		\includegraphics[width=0.25\linewidth]{regle_de_la_main_droite}
 		\caption{Schéma de la règle de main droite.}
 		\label{fig:regledelamaindroite}
 	\end{figure}
@@ -121,156 +120,36 @@ Préparation $1^{er}$ Contrôle Continu de Mécanique du Point 2 (07/03/2024)\\ 
 		\label{fig:plan_xz}
 	\end{figure}
 	
+	\FloatBarrier
 	
-	\subsection*{Q1 (14 pts) : skateur dans un half-pipe (analogue pendule)}
-	Un skateur de masse $m$ est sur un half-pipe semi-circulaire (moitié d'un cercle) de rayon $R$. On va considérer le skateur comme une particule M qui ne décolle jamais du half-pipe, c'est-à-dire, il sera toujours à une distance $R$ de l'origine $O$. On repère la position du skateur par l'angle $\theta$ qu'il fait avec la vertical descendent depuis $O$. La norme de l'accéleration de la pesanteur est dénoté $g$ (le vecteur $\Vec{g}$ pointe vers le bas). On va étudier ce mouvement en repère polaire.
+	\subsection*{Q2 : Un esquimau sur un igloo}
+	Un enfant esquimau joue sur le toit de son igloo. L’enfant se laisse glisser sans frottement depuis le sommet S de l’igloo qui a la forme d’une demi-sphère de rayon $R$ et de centre $O$. La position de l'enfant, assimilé à un point matériel $M$ de masse $m$ est repérée par l’angle $\theta$ par rapport à $\vec{u}_x$. La norme de l'accéleration de la pesanteur est dénoté $g$ (le vecteur $\Vec{g}$ pointe vers le bas). On va étudier ce mouvement en repère polaire. A l’instant initial $t = 0$, l’enfant est situé au sommet de l’igloo et a une vitesse nulle. L’enfant se laisse alors glisser sans frottement sur le toit
+	de l’igloo. Ce mouvement s’effectue entièrement $Oxy$. Les objectifs de cet exercice est d'étudier le mouvement en repère de Frénet (vous avez déjà étudié ce mouvement en repère polaire en mécanique du point 1). 
+	%trouver la position, c’est à dire l’angle $\theta$, pour laquelle1 l’enfant perd le contact avec l’igloo et l’évolution de la vitesse de l’enfant.
 	\begin{enumerate}
-	\item(0,5 pts) Complétez la Figure 1 ci-dessous en plaçant $\theta$, $\Vec{u}_x$, $\Vec{u}_y$, $\Vec{u}_r$, $\Vec{u}_\theta$ selon la convention usuelle (voir rappel si besoin et notez qu'il y a de flèches en plus).
-	\textbf{réponse} En bleu:
-	\begin{figure}
+	\item Complétez la Figure \ref{fig:igloo} ci-dessous en plaçant $\vec{T}$, $\vec{N}$ et $\vec{B}=\vec{T}\wedge \vec{N}$ (Obs: ($\vec{T}$, $\vec{N}$, $\vec{B}$) forme un base orthonormée direct).
+	\begin{figure}[h!]
 		\centering
-		\includegraphics[width=0.5\linewidth]{halfpipe}
-		\caption{}
-		\label{fig:halfpipe}
+		\includegraphics[width=0.4\linewidth]{igloo}
+		\caption{Igloo}
+		\label{fig:igloo}
 	\end{figure}
 
  	\FloatBarrier
-	
-	
-	\item (1 pts) Faire un bilan de forces (sans frottement) appliquer sur la particule $M$ et donner les expressions de toutes les forces en repère polaire (n'oubliez pas de dessiner ces vecteurs). \\
-	\textbf{réponse}: $\boxed{\vec{P} = mg( -\sin \theta \vec{u}_{\theta} + \cos \theta \vec{u}_r)}$ et $\boxed{\vec{R}_N = -R_N\vec{u}_r}$ (les vecteurs de base peuvent être placés n'importe où).
-	\begin{center}
-		\begin{tikzpicture}
-			\coordinate (G) at (0,-4.5);
-			\coordinate (T) at (0,0);
-			\coordinate (M) at (1,-3);
-			\coordinate (Meps) at (1+0.03,-3-0.09);
-			\coordinate (O) at (0,0);
-			\coordinate (Ort) at (0.9,0.3);
-			\coordinate (Ord) at (0.3,-0.9);
-			\coordinate (Md) at (1,-4.2);
-			\coordinate (Mrd) at (1.25,-3.75);	
-			\fill (M) circle[radius=4pt]  node[left]{$m,M$};	
-			\draw[very thick,->](O)--(Ort) node[right]{$\vec{u}_{\theta}$};
-			\draw[very thick,->](O)--(Ord) node[right]{$\vec{u}_{r}$};
-			\draw[very thick,->](M)--(Md) node[right]{$\vec{P} = m \vec{g}$};
-			\draw[very thick,<-](Meps)--(Mrd) node[above right]{$\vec{R}$};
-			\draw[dashed] (G)--(T);
-			\draw[dashed](M)--(O) node[left]{$O$};
-			\pic[draw, ->, "$\theta$", angle radius=50, angle eccentricity=1.2] {angle = G--O--M};
-		\end{tikzpicture}
-	\end{center}
-	\item (1 pts) Donner les expressions simplifiés pour ce type de mouvement pour les vecteurs vitesse $\Vec{v}$ et accélération $\Vec{a}$ en repère polaire (voir rappel). \\
-	\textbf{réponse}: Comme $r = R = cte$, donc $\ddot{r} = \dot{r} = 0$. On a donc:
-	$$\boxed{\Vec{v}(t) = R \dot{\theta} \Vec{u}_{\theta}, \quad
-	\Vec{a}(t) = - R\dot{\theta}^2 \Vec{u}_r + R \ddot{\theta} \Vec{u}_{\theta}}$$
-	
-
-
-	
-	\item (1 pts) Appliquer le principe fondamentale de la dynamique (PFD) et les projeter sur l'axe $\Vec{u}_{\theta}$ et $\Vec{u}_{r}$. \\
-	\textbf{réponse}: du PFD, on a $m \vec{a} = \sum \vec{F} = \vec{P} + \vec{R}_N$. En composants on a
-	\begin{align*}
-		\boxed{
-	\begin{cases}
-			-mg \sin \theta  = m R \ddot{\theta} \quad (\text{sur} \; \vec{u}_{\theta} ),\\
-			 mg \cos \theta - R_N = - m R\dot{\theta}^2 \quad (\text{sur} \; \vec{u}_{r} )
-	\end{cases}
-	}
-	\end{align*}
-
-	\item (1 pts) En utilisant le PFD sur $\Vec{u}_{\theta}$, déduire l'équation différentiel qui gouverne ce mouvement en utilisant l'approximation $\sin \theta \approx \theta$ pour des petites oscillations. \\
-	\textbf{réponse}: $\boxed{R \ddot{\theta} + g \theta = 0}$.
-	\item (1 pts) Vérifiez qu'une solution du type $\theta(t) = A \sin{\omega t}$ peut satisfaire l'équation précédent. Donner aussi l'expression pour $\omega$ en fonction de $g$ et $R$. \\
-	\textbf{réponse}: En replaçant $\ddot{\theta} = -\omega^2 A \sin{\omega t}$ sur l'ED on a	
-	\begin{align*}
-    (-\omega^2 R + g) A \sin{\omega t}  = 0.
-	\end{align*}	
-	Cette équation est vrai si : $A = 0$, $\forall \omega, t$ (pas très amusant) et $\boxed{\omega = \sqrt{g/R}}, \forall A, t$.
-	\item (1 pts) Dans l'instant initial le skateur est au tout au fond du half-pipe, avec $\theta(0) = 0$, et il imprime une vitesse angulaire (par exemple en s'autopropulsant avec ces pieds) de sorte que $\dot{\theta}(0) = \dot{\theta}_0$. Déterminez la constant $A$ en fonction de $\dot{\theta}_0$ et $\omega$. Qu'est-ce que représente $A$ et donner sa dimension. 
-	
-	\textbf{réponse}: D'abord on vérifie $\theta(0) = A \sin{\omega \times 0} = 0$, ce qui correspond à la condition initiale. Par contre cette condition ne nous permet pas de trouver $A$. Prenons sa dérivé dans l'instant $t=0$: $\dot{\theta}(0) = \omega A \cos{\omega \times 0} = \omega A$. De la condition initiale de la vitesse angulaire, on trouve que $\omega A = \dot{\theta}_0 \Rightarrow \boxed{A = \frac{\dot{\theta}_0}{\omega}}$. Finalement $A$ représente l'angle maximale qui la particule $M$ atteint, ce qui est une grandeur sans dimension (ou égale $1$). Cette interprétation vient directement de l'expression de $\theta(t)$. Alternativement on trouve que $A$ est sans dimension car $\dot{\theta}_0$ et $\omega$ ont les mêmes dimensions.
-	\item (0,5 pts) Ce mouvement circulaire est-il uniforme ou non-uniforme? pourquoi? \\
-	\textbf{réponse}: Non-uniforme car la vitesse angulaire n'est pas constant. \footnote{Le mouvement est accéléré ($\vec{a} \neq \vec{0}$) même pour le cas uniforme (vitesse angulaire constant, c'est-à-dire, $\ddot{\theta} = 0$).}.   
-	\item (1 pts) Pour le cas particulier de $R = 10 \rm m$, $g = 10 \rm{m/s^2}$, $\dot{\theta}_0 = 5\times 10^{-2} \rm{rad/s}$, calculer $\omega$ et $A$. \\
-	\textbf{réponse}: $ \omega = \sqrt{10/10} = \boxed{1 \, \textrm{rad/s} }$ et $A = 5 \times 10^{-2}/1 = \boxed{5\times 10^{-1} \textrm{rad}}$. Obs: $\rm rad$ est optionnel.
-	
-	\item (1 pts) Pour ce cas particulier, tracer $\theta(t)$ pour $t \in [0 \rm s,T]$, où $T$ est temps nécessaire pour que la fonction sinus complète son cycle. N'oubliez pas de calculer $T$ (en fonction de $\pi$) et d'écrire la valeur de $T$ et $A$ sur le dessin. \\
-	\textbf{réponse:} $T = 2\pi/\omega = 2\pi/ 1 = 2\pi \rm s$. \\
-	\begin{tikzpicture}
-		\begin{axis}[
-			%		xmin=-0.2, xmax=4, ymin=-0.2, ymax=3, 
-			axis x line=middle, 
-			axis y line=middle, 
-			xlabel = {$t$},
-			ylabel = {$\theta(t)$},
-			ymajorgrids=true,
-			xmajorgrids=true,
-			grid style=dashed,
-			xmin=-0.2,xmax=4.5,
-			ymin=-1.5,ymax=1.5,
-			xtick={1,2,3,4},
-			xticklabels={$T/4$,$T/2$,$3T/4$,$\qquad \quad T = 2\pi \rm s$},
-			ytick={-1,0,1},
-			yticklabels={$-A = - 5\times 10^{-2}$, $0$, $A = 5\times 10^{-2}$}
-			]	
-			\addplot[very thick, domain=0:4]{sin(90*x)};
-		\end{axis}
-	\end{tikzpicture}
-
-	\item (1 pts) Donner l'expression d'énérgie cinétique générique en fonction de $R$, $m$ et $\dot{\theta}$ (utilisez la formule de vitesse du l'exercise 3). \\
-	\textbf{réponse:} $E_c = \frac{1}{2} m (R \dot{\theta}\vec{u}_{\theta}) \cdot (R \dot{\theta} \vec{u}_{\theta}) = \boxed{\frac{1}{2} m R^2 \dot{\theta}^2}$.
-	\item (1 pts) Pour le cas particulier l'exercise 9 et pour $m=80 \rm kg$, calculer l'énergie cinétique du skateur de masse  à l'instant $t=0 \rm s$. 
-	\textbf{réponse:} $E_c^0 = E_c(t=0) = \frac{1}{2} m R^2 \dot{\theta}_0^2 =  \frac{1}{2} \times 80 \times 10^2 \times (5\times 10^{-2})^2 = 40 \times 25 \times 10^{-2} = \boxed{10 \rm J}$.
-	\item (1 pts) Donner l'expression du travail $W_{0\to f}(\vec{P})$ réalisé par la force de poids entre $\theta_0 = 0 \, \rm rad$ et $\theta_f$, en fonction des valeurs génériques de $m, g, \theta_f$, et $R$. \\
-	\textbf{réponse:} Comme $d \vec{OM} = R d\theta \vec{u}_{\theta}$, on prend en considération juste la composant $\theta$ de la force poids. On a donc $W_{0\to f}(\vec{P}) = \displaystyle \int_{0}^{\theta_f} -mg \sin \theta R d \theta = mg R \cos \theta \big|_{0}^{\theta_f} = \boxed{m g R (\cos \theta_f - 1)}$.
-	\item (1 pts) En utilisant le théorème d'énergie cinétique, donner l'expression pour $\dot{\theta}_{0}$ nécessaire pour que le skateur arrive jusqu'au bord supérieur du half-pipe (à $\theta_f = \pi/2$) mais sans le dépasser. \\
-	\textbf{réponse:} Sachant que $\vec{R}_N \perp d \vec{OM}$ son travail est nulle. Comme $M$ ne peut pas dépasser le bord supérieur, sa vitesse doit être nulle à $\theta_f = \pi/2$, donc $E_c^f = 0 \rm J$. Dans l'instant initiale $E^0_c = \frac{1}{2} m R^2 \dot{\theta}_0^2$. Finalement, du TEC, viens que \footnote{Pas besoin de résoudre le résultat finale.}
-	\begin{align*}
-	E_c^f - E_c^0 = W_{0\to f}(\vec{P}) \Rightarrow 0 - \frac{1}{2} m R^2 \dot{\theta}_0^2 = m g R (\cos{\pi/2} - 1) \\
-	- \frac{1}{2} m R^2 \dot{\theta}_0^2 = - m g R  \Rightarrow \boxed{\dot{\theta}_0 = \sqrt{\frac{2\times g}{R}}}.
- 	\end{align*}
-	\item (1 pts) Maintenant, une force de frottement constant est présent $\vec{f} = -f \vec{u}_{\theta}$ (en supposant $\dot{\theta}_{0}$ > 0), donner une expression $\dot{\theta}_{0}$ sous les mêmes conditions du problème précédent. \\
-	\textbf{réponse:} Le travail de la force de frottement est $W_{0\to f}(\vec{f}) = \int_{0}^{\pi/2} -f R d\theta = -fR\pi/2$. Finalement, du TEC, viens que
-	\begin{align*}
-		E_c^f - E_c^0 = W_{0\to f}(\vec{P}) + W_{0\to f}(\vec{f})\Rightarrow - \frac{1}{2} m R^2 \dot{\theta}_0^2 = -m g R - f R (\pi/2) \\ \Rightarrow \boxed{\dot{\theta}_0 = \sqrt{\frac{2 m g + f\pi}{mR}}}.
-	\end{align*}
-	\end{enumerate}
-		
-	\subsection*{Q2 (6 pts) : repère polaire alternatif }
-		Imaginons que dans une autre pays du monde la convention préféré pour le repère polaire est tel que la position d'une particule $M$ soit paramétrisé par sa distance $\rho = \rho(t)$ (variable avec le temps) par rapport l'origine $O$ et une angle $\alpha = \alpha(t)$ (variable avec le temps) mesuré par rapport à $\vec{u}_y$ de tel sorte que $\vec{e}_{\rho} = -\sin{\alpha} \vec{u}_x + \cos{\alpha} \vec{u}_y$ et $\vec{e}_{\alpha} = \cos{\alpha} \vec{u}_x + \sin{\alpha} \vec{u}_y$ représente les vecteurs radiale et circonférentielle de la base, respectivement (notez qu'on a utilisé d'autres lettres pour cette nouvelle base afin de ne pas confondre avec la notation du rappel).
-		\begin{enumerate}
-			\item (1,5pts) Dessinez le repère $R'(O, \vec{e}_{\rho}, \vec{e}_\alpha)$ par rapport au repère cartésien $R(O, \vec{u}_x, \vec{u}_y)$ dans l'space ci-dessous. \\
-			\textbf{réponse:} \\
-			\begin{tikzpicture}
-				\coordinate (O) at (0,0);
-				\coordinate (X) at (1.8,0);
-				\coordinate (Y) at (0,1.8);
-				\coordinate (R) at (-0.6, 1.5);
-				\coordinate (T) at (1.5, 0.6);
-				
-				\draw[very thick,->] node[below left]{$O$} (O)--(X) node[right]{$\vec{u}_{x}$};
-				\draw[very thick,->](O)--(Y) node[right]{$\vec{u}_{y}$};
-				\draw[very thick,->](O)--(R) node[left]{$\vec{e}_{\rho}$};
-				\draw[very thick,->](O)--(T) node[right]{$\vec{e}_{\alpha}$};
-				\pic[draw, ->, "$\alpha$", angle radius=30, angle eccentricity=1.2] {angle = Y--O--R};
-			\end{tikzpicture}
-		
-			\item (1,5pts) Vérifiez que $\{ \vec{e}_{\rho}, \vec{e}_\alpha\}$ est une base orthonormale, c'est-à-dire, $\|\vec{e}_{\rho}\| = \|\vec{e}_{\alpha}\| = 1$ et $\vec{e}_{\rho} \cdot \vec{e}_{\alpha} = 0$. \\
-			\textbf{réponse:} 
-			\begin{align*}
-			\| \vec{e}_{\rho} \| &= \sqrt{(-\sin \alpha)^2 + (\cos \alpha)^2} = \sqrt{\sin^2 \alpha + \cos^2 \alpha} = 1 \\ 
-			\| \vec{e}_{\alpha} \| &= \sqrt{(\cos \alpha)^2 + (\sin \alpha)^2} = 1 \\ 
-			\vec{e}_{\rho} \cdot \vec{e}_{\alpha} &= (-\sin \alpha) \times (\cos \alpha) + (\cos \alpha) \times (\sin \alpha) = 0
-			\end{align*}
-			\item (1,5pts) Démontrez des expressions pour $\dot{\vec{e}}_{\rho}$ et $\dot{\vec{e}}_{\alpha}$ (analogues mais différents à celles du rappel).
-			\textbf{réponse:} 
-			\begin{align*}
-				\dot{\vec{e}}_{\rho}= - (\cos \alpha) \dot{\alpha} \vec{u}_x + (-\sin \alpha) \dot{\alpha} \vec{u}_y = \boxed{ -\dot{\alpha} \vec{e}_{\alpha}} \\
-				\dot{\vec{e}}_{\alpha}= (-\sin \alpha) \dot{\alpha} \vec{u}_x + (\cos \alpha) \dot{\alpha} \vec{u}_y = \boxed{ \dot{\alpha} \vec{e}_{\rho}}
-			\end{align*}
-			\item (1,5pts) En sachant que $\vec{OM} = \rho \vec{e}_\rho$, ou de manière explicite $\vec{OM}(t) = \rho(t) \vec{e}_\rho(\alpha(t))$, dérivez ce vecteur pour obtenir la vitesse $\vec{v}$ (analogue mais pas exactement égal à celle du rappel). \\
-			\textbf{réponse:} $\dot{\vec{OM}} = \dot{\rho} \vec{e}_\rho + \rho \dot{\vec{e}}_{\rho} = \boxed{\dot{\rho} \vec{e}_\rho - \rho \dot{\alpha} \vec{e}_{\alpha}}$ 
-		\end{enumerate}
-
+	\item Donner les expressions de toutes les forces en repère de Frénet.
+	\item Calculer les moments de chacune de ces forces par rapport au point $O$.
+	\item Calculer le moment cinétique de l'enfant par rapport au point $O$.
+	\item Appliquer le théorème du moment cinétique à ce mouvement.
+	\item Appliquer le principe fondamentale de la dynamique (PFD) en repère de Frénet.
+	\item L'équation différentiel trouvé par projection du PFD sur l'axe $\vec{T}$ est-il la même que celle de 5)? Pourquoi? 
+	\item Trouver la norme de la vitesse dans l'instant que l'énfant décolle d'igloo (obs: utilisez une des équations du PFD).
+	\item L'application du PFD en repère polaire résulte dans les système:
+	\begin{align}
+		\begin{cases}
+			-m g \cos \theta + R_N = -m R \dot{\theta}^2 , \\
+			m g \sin \theta = m R \ddot{\theta}
+		\end{cases}
+	\end{align}
+ 	Montrer ces équations a partir des résultats de 6).
+\end{enumerate}
 \end{document}
