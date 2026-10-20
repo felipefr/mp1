@@ -1,8 +1,8 @@
-# Dossier Mécanique du Point 1 2025-2026 (automne)
-- CC1 SPI GP3 - réalisé le 21/10/25
-- Corrigé CC1 SPI GP3 - publié le 21/10/25 
-- CC2 SPI GP3 - publié le 25/11/25 
-- Corrigé CC1 SPI GP3 - publié le 25/11/25 
-- Notes CC1 : publié XX/YY/25
-- Notes CC2 : publié le 08/12/25
+# Questions pour s’entraîner CC1 Chim (2026-2027) :
+- CC1 du GP Chim 2023-2024 : Q1, Q2 et Q3
+- CC1 du GP Maths 2023-2024: Q1, Q2 et Q3
+- CC1 de GP Maths 2024-2025 : Q1 et Q2.
+- CC1 de GP SPI 2024-2025 : Q2.
+- CC1 de GP SPI 2025-2026 : Q1.
+
   
